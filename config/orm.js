@@ -24,8 +24,6 @@ var orm = {
 
         var queryString = "INSERT INTO ?? (burger_name) VALUES (?)";
 
-        console.log(queryString);
-
         connection.query(queryString, [table, [values]], function (err, result) {
             if (err) {
                 throw err;
@@ -56,3 +54,5 @@ var orm = {
 // orm.updateOne("burgers", { devoured: true }, { id: 3 }, console.log)
 // orm.insertOne("burgers", "cheese", console.log)
 // orm.selectAll("burgers", console.log)
+
+module.exports = orm;
