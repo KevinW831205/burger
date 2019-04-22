@@ -9,3 +9,5 @@ CREATE TABLE burgers
 	devoured BOOLEAN DEFAULT false,
 	PRIMARY KEY (id)
 );
+
+UPDATE burgers SET devoured = true WHERE id = 2
