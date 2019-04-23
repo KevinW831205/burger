@@ -1,3 +1,25 @@
 h1{
-    color: brown;
+    text-align: center;
+}
+
+.collection{
+    font-size: 20px;
+}
+
+.badge{
+
+}
+
+
+input[type="text"]{
+    text-align: center;
+}
+
+.badge:hover{
+    background-color: red;
+    color:white;
+}
+
+#devoured-burgers{
+    color: darkgray;
 }

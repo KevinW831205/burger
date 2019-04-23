@@ -7,10 +7,49 @@ var burger = require("../models/burger.js");
 router.get("/", function (req, res) {
     burger.all(function (data) {
 
-        var allBurgers = data;
+        var allBurgers = { burger: data };
+
+        console.log(allBurgers)
         res.render("index", allBurgers)
 
     });
 });
 
-module.exports = router;
+router.put("/api/burgers/:id", function (req, res) {
+
+    burger.eat(req.params.id, function (result) {
+        if (result.changedRows == 0) {
+            return res.status(404).end();
+        } else {
+            res.status(200).end();
+        }
+    })
+
+});
+
+router.post("/api/burgers", function (req, res) {
+
+    burgerName = req.body.name;
+
+    burger.add(burgerName, function (result) {
+
+
+        res.json({ id: result.insertId });
+
+        // if (result.affectedRows == 0) {
+        //     // If no rows were changed, then the ID must not exist, so 404
+        //     return res.status(404).end();
+        // } else {
+        //     res.status(200).end();
+        // }
+
+
+    });
+
+
+});
+
+
+
+
+module.exports = router; 
