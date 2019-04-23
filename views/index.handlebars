@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Burgers</h1>
+    <h1><i class="fas fa-hamburger"></i> Eat-Da-Burger! <i class="fas fa-hamburger"></i></h1>
 
     <div class="row">
         <div class="col s1"></div>
@@ -13,21 +13,17 @@
                 {{/each}}
 
 
-
-
         </div>
         <div class="col s2"></div>
 
         <div class="collection col s4" id="devoured-burgers">
             <h3>Burgers Devoured</h2>
 
-
                 {{#each burger}}
                 {{#if devoured}}
                 {{> burger-block devour=true}}
                 {{/if}}
                 {{/each}}
-
 
         </div>
         <div class="col s1"></div>
