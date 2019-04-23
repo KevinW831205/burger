@@ -12,7 +12,7 @@ var orm = {
 
         connection.query(queryString, table, function (err, data) {
             if (err) {
-                return res.status(500).end();
+                return data.status(500).end();
             }
             callback(data);
         });
