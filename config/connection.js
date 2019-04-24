@@ -17,6 +17,16 @@ if (process.env.JAWSDB_URL) {
     });
 
 }
+// test connection
+// connection.query("SELECT * FROM burgers", function (err, data) {
+//     if (err) {
+//         return res.status(500).end();
+//     }
+
+//     console.log(data)
+
+//     });
+
 
 //logs if connected
 connection.connect(function (err) {

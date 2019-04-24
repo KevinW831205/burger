@@ -51,6 +51,7 @@ var orm = {
 
 }
 
+// test functions
 // orm.updateOne("burgers", { devoured: true }, { id: 3 }, console.log)
 // orm.insertOne("burgers", "cheese", console.log)
 // orm.selectAll("burgers", console.log)
