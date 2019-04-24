@@ -49,6 +49,8 @@ var orm = {
     },
 
     deleteOne: function (table, condition, callback) {
+        //function that takes input of tablename condition which to delete, a callback function
+        //removes conditioned element from table and returns result to callback function
 
         var queryString = " DELETE FROM ?? WHERE ?"
 

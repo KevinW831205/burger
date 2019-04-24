@@ -19,6 +19,10 @@ var burger = {
         //Take burgerID as argument and updates the devoured to true
         orm.updateOne("burgers", { devoured: true }, { id: burgerID }, callback)
 
+    },
+
+    remove: function (burgerID, callback) {
+        orm.deleteOne("burgers", { id: burgerID }, callback)
     }
 
 }
@@ -27,6 +31,7 @@ var burger = {
 // burger.add("double Cheese",console.log)
 // burger.eat(5, console.log)
 // burger.all(console.log)
+// burger.remove(2, console.log)
 
 
 module.exports = burger;
