@@ -33,17 +33,12 @@ h1{
 
 .badge:hover{
     font-size: 20px !important;
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
 
 input[type="text"]{
     text-align: center;
-}
-
-.devour-burger:hover{
-    background-color: red;
-    color:white;
 }
 
 

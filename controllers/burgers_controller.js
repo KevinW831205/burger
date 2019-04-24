@@ -29,6 +29,19 @@ router.put("/api/burgers/:id", function (req, res) {
 
 });
 
+router.delete("/api/burgers/:id", function (req, res) {
+    // when api/burgers/:id route hits a put request with id params, update id burger devoured to true
+
+    burger.remove(req.params.id, function (result) {
+        if (result.affectedRows == 0) {
+            return res.status(404).end();
+        } else {
+            res.status(200).end();
+        }
+    })
+
+});
+
 router.post("/api/burgers", function (req, res) {
 
     // when api/burgers route hit a post request add burger information to mysql. Expects a name in the post request body
