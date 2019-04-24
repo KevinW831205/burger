@@ -1,6 +1,8 @@
 var mysql = require("mysql");
 
-var connecttion;
+var connection;
+
+//setup connection to mysql either jawsdb for heroku or localhost mysql
 
 if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
@@ -16,17 +18,7 @@ if (process.env.JAWSDB_URL) {
 
 }
 
-
-
-// connection.query("SELECT * FROM burgers", function (err, data) {
-//     if (err) {
-//         return res.status(500).end();
-//     }
-
-//     console.log(data)
-
-//     });
-
+//logs if connected
 connection.connect(function (err) {
     if (err) {
         console.error("error connecting: " + err.stack);

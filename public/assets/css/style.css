@@ -44,3 +44,9 @@ input[type="text"]{
 #devoured-burgers{
     color: darkgray;
 }
+
+#burger-validation{
+    color: red;
+    text-align: center;
+    display: none;
+}

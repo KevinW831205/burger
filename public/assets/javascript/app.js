@@ -1,3 +1,6 @@
+// add validation
+
+
 $(function () {
 
     $(".devour-burger").on("click", function () {
@@ -14,26 +17,32 @@ $(function () {
 
     $("#submit-burger").on("click", function (event) {
 
+
         event.preventDefault();
-        var burgerName = { name: $("#burger-name").val().trim() }
+        $("#burger-validation").hide()
 
 
-        $.ajax("api/burgers", {
-            type: "POST",
-            data: burgerName
-        }).then(
-            function () {
-                location.reload();
-            }
-        )
+        if ($("#burger-name").val() == "") {
+            $("#burger-validation").show()
+        } else {
 
-        $("#burger-name").val("")
+            var burgerName = { name: $("#burger-name").val().trim() }
+
+            $.ajax("api/burgers", {
+                type: "POST",
+                data: burgerName
+            }).then(
+                function () {
+                    location.reload();
+                }
+            )
+
+            $("#burger-name").val("")
+
+        }
+
 
     });
-
-
-
-
 
 })
 

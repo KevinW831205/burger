@@ -1,5 +1,7 @@
 var orm = require("../config/orm.js")
 
+//add finished
+
 var burger = {
 
     all: function (callback) {
