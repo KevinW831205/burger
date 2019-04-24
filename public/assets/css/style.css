@@ -27,8 +27,13 @@ h1{
 }
 
 .badge{
+    border-radius: 5px;
+    transform: scale(1.2);
+}
+
+.badge:hover{
     font-size: 20px !important;
-    color: black !important;
+    transform: scale(1.5);
 }
 
 
@@ -36,13 +41,18 @@ input[type="text"]{
     text-align: center;
 }
 
-.badge:hover{
+.devour-burger:hover{
     background-color: red;
     color:white;
 }
 
+
+#burgers{
+    color: black;
+}
+
 #devoured-burgers{
-    color: darkgray;
+    color: darkgray !important;
 }
 
 #burger-validation{
