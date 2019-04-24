@@ -46,6 +46,21 @@ var orm = {
 
             callback(result);
         })
+    },
+
+    deleteOne: function (table, condition, callback) {
+
+        var queryString = " DELETE FROM ?? WHERE ?"
+
+        connection.query(queryString, [table, condition], function (err, result) {
+            if (err) {
+                throw err
+            }
+
+            callback(result);
+
+        })
+
     }
 
 
@@ -55,5 +70,6 @@ var orm = {
 // orm.updateOne("burgers", { devoured: true }, { id: 3 }, console.log)
 // orm.insertOne("burgers", "cheese", console.log)
 // orm.selectAll("burgers", console.log)
+// orm.deleteOne("burgers", { id: 3 }, console.log)
 
 module.exports = orm;
